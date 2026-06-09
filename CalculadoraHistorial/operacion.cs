@@ -25,6 +25,11 @@ public class Operacion
                 return resultadoAnterior*nuevoValor;
             case TipoOperacion.Division:
                 return resultadoAnterior/nuevoValor;
+            case TipoOperacion.Limpiar:
+                resultadoAnterior =0;
+                nuevoValor = 0;
+                return 0;
+                
             default:
                 return resultadoAnterior;
         }
@@ -34,6 +39,11 @@ public class Operacion
     {
         this.resultadoAnterior = resultadoAnterior;
         this.nuevoValor = nuevoValor;
+        this.operacion = operacion;
+    }
+    public Operacion(TipoOperacion operacion)
+    {
+        
         this.operacion = operacion;
     }
 

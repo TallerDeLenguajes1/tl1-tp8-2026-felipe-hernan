@@ -39,10 +39,12 @@ class Calculadora
     }
     public void Limpiar()
     {
-        foreach (Operacion op in operaciones.ToList()) //opera sobre una lista de las operaciones
-        {
-            operaciones.Remove(op);
-        }
-        dato = 0;
+        Operacion operacionLimpiar = new Operacion(TipoOperacion.Limpiar);
+        //foreach (Operacion op in operaciones.ToList()) //opera sobre una lista de las operaciones
+        //{
+          //  operaciones.Remove(op);
+        //}
+        operaciones.Add(operacionLimpiar);
+        dato = operacionLimpiar.resultado();
     }
 }
